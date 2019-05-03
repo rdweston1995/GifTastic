@@ -1,6 +1,6 @@
 $(document).ready(function () {
     var topics = ["Jon Snow", "Theon Greyjoy", "Brandon Stark", "Ser Davos", "Tormund Giantsbane", 'Sandor Clegene', 'Beric Dondarion', 'Gandalf', 'cats'];
-    var apiKey = "https://api.giphy.com/v1/gifs/random?api_key=RrgqNg9Dm83UXhvKWjvgP434CbrzUhgi";
+    var apiKey = "https://api.giphy.com/v1/gifs/random?api_key=VwVG9Ri3ZO8eWDbFxQj1aR46gxpi88cV";
     var buttonNum = 0;
 
     for (var i = 0; i < topics.length; i++) {
@@ -35,7 +35,7 @@ $(document).ready(function () {
         }
     });
 
-    $("aside").append("<button class='clear'>CLEAR</button>");
+    //$("aside").append("<button class='clear'>CLEAR</button>");
     $(".clear").on("click", function(){
         $(".container").empty();
     });
