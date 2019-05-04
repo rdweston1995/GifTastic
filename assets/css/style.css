@@ -15,4 +15,5 @@ img{
 .divContainers{
     width: 200px;
     margin: 0;
+    float:left;
 }
