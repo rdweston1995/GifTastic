@@ -14,6 +14,10 @@ img{
 
 .divContainers{
     width: 200px;
-    margin: 0;
+    margin: 15px;
     float:left;
+}
+
+.rating{
+    margin-left: 15px;
 }

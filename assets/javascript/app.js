@@ -15,17 +15,23 @@ $(document).ready(function () {
     }
 
     //On click for adding another character button
-    $("#addButton").on("click", function(){
-        //Adding the new button to the buttonList class
-        $(".buttonList").append("<button class='characterBtn btn btn-primary' id='button" + buttonNum + "'>" + $("#newButton").val() + "</button>");
-        //Adds to the new topic to the topics array
-        topics.push($("#newButton").val());
-        //Run the function to add an on click event for the new button
-        btnClick();
-        //Iterate buttonNum
-        buttonNum++;
-        //Clear the value of the newButton id after the new topic has been added
-        $("#newButton").val("");
+    $("#addButton").on("click", function () {
+        if ($("#newButton").val() == "Owen Wilson") {
+            //Adding the new button to the buttonList class
+            $(".buttonList").append("<button class='characterBtn btn btn-primary' id='button" + buttonNum + "'>" + $("#newButton").val() + "</button>");
+            //Adds to the new topic to the topics array
+            topics.push($("#newButton").val());
+            //Run the function to add an on click event for the new button
+            btnClick();
+            //Iterate buttonNum
+            buttonNum++;
+            //Clear the value of the newButton id after the new topic has been added
+            $("#newButton").val("");
+        }else{
+            alert("That's not Owen Wilson");
+            $("#newButton").val("");
+        }
+        
     });
 
 
@@ -61,7 +67,7 @@ $(document).ready(function () {
                     //$("img").attr("alt", removeSpace + " gif");
 
                     $(".container").append("<p class='divContainers' id='div" + i + "'></p");
-                    $("#div" + i).prepend("<p class='rating'>" + response.data[i].rating + "</p>");
+                    $("#div" + i).prepend("<p class='rating'>Rating: " + response.data[i].rating + "</p>");
                     $("#div" + i).prepend("<img class='gif" + i + "' src='" + response.data[i].images.original_still.url + "' data-still='" + response.data[i].images.original_still.url + "' data-animate='" + response.data[i].images.original.url + "' data-state='still'>");
                     
 
